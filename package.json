@@ -1,0 +1,23 @@
+{
+  "name": "safebox-api",
+  "version": "1.0.0",
+  "description": "api to store passwords",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Felipe-moreno148/safebox-api"
+  },
+  "keywords": [
+    "MVP",
+    "passwords"
+  ],
+  "author": "Felipe Moreno",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "prisma": "^6.10.1"
+  }
+}
