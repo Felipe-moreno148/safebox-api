@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  # MySQL Database Service
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: unless-stopped
+    ports:
+      # <Host Port>:<Container Port>
+      - "3309:3309"
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+    volumes:
+      # Persist data even if the container is removed
+      - dbdata:/var/lib/mysql
+
+# Docker Volumes
+volumes:
+  dbdata:
+    driver: local
